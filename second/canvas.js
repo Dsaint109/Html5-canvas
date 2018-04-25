@@ -35,7 +35,7 @@ class Canvas
 	createCircles() {
 		this.circles = []
 
-		for (let i = 0; i < 500; i++) {
+		for (let i = 0; i < 300; i++) {
 			this.circles.push(new Circle({
 				context: this.context, 
 				width: this.canvas.width, 
@@ -103,8 +103,8 @@ class Circle
 		this.y += this.dy
 
 		// Interactivity
-		if (mouse.x - this.x < 150 && mouse.x - this.x > -150 
-			&& mouse.y - this.y < 150 && mouse.y - this.y > -150)
+		if (mouse.x - this.x < 75 && mouse.x - this.x > -75 
+			&& mouse.y - this.y < 75 && mouse.y - this.y > -75)
 			this.radius += (this.radius < this.maxRadius) ? 2: 0
 		else if (this.radius > this.minRadius)
 			this.radius -= 2
